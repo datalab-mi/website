@@ -1,0 +1,15 @@
+# Site settings
+# http://jekyllrb.com/docs/configuration/
+title: Mon Jekyll
+email: meryem.achemlal@alterway.fr
+description:  Dr Jekyll vous aide à construire vos sites statiques !
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+# twitter_username: tweetpressfr
+github_username:  mery92
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: assets/css
+  style:    compressed

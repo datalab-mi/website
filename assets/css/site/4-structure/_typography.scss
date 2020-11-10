@@ -1,0 +1,76 @@
+::-webkit-input-placeholder { color: $input-placeholder-color; font-style:italic; }
+:-moz-placeholder { color: $input-placeholder-color; font-style:italic; }
+::-moz-placeholder { color: $input-placeholder-color; opacity: 1; font-style:italic; }
+:-ms-input-placeholder { color: $input-placeholder-color; font-style:italic; }
+
+::-moz-selection {
+    color: $white;
+    background-color: $body-color;
+}
+
+::selection {
+    color: $white;
+    background-color: $body-color;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+em {
+    font-style: italic;
+}
+
+h1, .h1 {
+    @include media-breakpoint-up(lg) {
+        font-size: 4.8rem;
+    }
+}
+
+h2, .h2 {
+    @include media-breakpoint-up(lg) {
+        font-size: 3.6rem;
+    }
+}
+
+h3, .h3 {
+    @include media-breakpoint-up(lg) {
+        font-size: 2.4rem;
+    }
+}
+
+h4, .h4 {
+    @include media-breakpoint-up(lg) {
+        font-size: 1.6rem;
+    }
+}
+
+h5, .h5 {
+    @include media-breakpoint-up(lg) {
+        font-size: 1.8rem;
+    }
+}
+
+h6, .h6 {
+    @include media-breakpoint-up(lg) {
+        font-size: 1.6rem;
+    }
+}
+
+.external-link {
+    .icon-external-link {
+        display: inline-block;
+        margin-left: 0.6rem;
+        font-size: 1rem;
+    }
+
+    // Remove icon when external link have an image
+    > img + .icon-external-link {
+        display: none!important;
+    }
+}
+
+.mark, mark {
+    color: $primary;
+    font-weight: bolder;
+}

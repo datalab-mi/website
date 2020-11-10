@@ -1,0 +1,222 @@
+/* Plain HTML Version */
+form.fivestar-widget {
+  clear: both;
+  display: block;
+}
+form.fivestar-widget select,
+form.fivestar-widget input {
+  margin: 0;
+}
+
+/* Combo Static and Rate Widget */
+.fivestar-combo-stars .fivestar-static-form-item {
+  float: left; /* LTR */
+  margin-right: 40px; /* LTR */
+  margin-left: 40px; /* LTR */
+}
+.fivestar-combo-stars .fivestar-static-item {
+  float: left; /* LTR */
+  margin-right: 40px; /* LTR */
+}
+
+.fivestar-combo-stars .fivestar-form-item {
+  float: left; /* LTR */
+}
+
+/* Fivestar form items */
+.fivestar-static-form-item .form-item,
+.fivestar-form-item .form-item {
+  margin: 0;
+}
+
+/* Static View-only Star Version */
+div.fivestar-widget-static {
+  display: block;
+}
+
+div.fivestar-widget-static br {
+  clear: left; /* LTR */
+}
+
+div.fivestar-widget-static .star {
+  float: left; /* LTR */
+  width: 17px;
+  height: 15px;
+  overflow: hidden;
+  text-indent: -999em;
+  background: url(../img/star.gif) no-repeat 0 0; /* LTR */
+}
+
+div.fivestar-widget-static .star span.on {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../img/star.gif) no-repeat 0 -32px; /* LTR */
+}
+
+div.fivestar-widget-static .star span.off {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../img/star.gif) no-repeat 0 0; /* LTR */
+}
+
+/* Javascript Star Version */
+div.fivestar-widget {
+  display: block;
+}
+
+div.fivestar-widget .cancel,
+div.fivestar-widget .star {
+  float: left; /* LTR */
+  width: 17px;
+  height: 15px;
+  overflow: hidden;
+  text-indent: -999em;
+}
+div.fivestar-widget .cancel,
+div.fivestar-widget .cancel a {
+  background: url(../img/delete.gif) no-repeat 0 -16px; /* LTR */
+  text-decoration: none;
+}
+
+div.fivestar-widget .star,
+div.fivestar-widget .star a {
+  background: url(../../img/star.gif) no-repeat 0 0; /* LTR */
+  text-decoration: none;
+}
+
+div.fivestar-widget .cancel a,
+div.fivestar-widget .star a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: 0 0; /* LTR */
+  cursor: pointer;
+}
+
+// div.fivestar-widget div.on a {
+//   background-position: 0px -34px; /* LTR */
+// }
+// div.fivestar-widget div.hover a,
+// div.rating div a:hover {
+//   background-position: 0 -32px; /* LTR */
+// }
+form.fivestar-widget div.description {
+  margin-bottom: 0;
+}
+
+html.js .fivestar-submit {
+  display: none;
+}
+
+.fivestar-combo-stars .form-type-fivestar .form-item {
+  float: left;
+}
+// ----------basics fivestart
+/* Static View-only Star Version */
+.fivestar-basic div.fivestar-widget-static .star {
+  background-image: url(../img/star.png);
+}
+
+.fivestar-basic div.fivestar-widget-static .star span.on {
+  background-image: url(../img/star.png);
+}
+
+.fivestar-basic div.fivestar-widget-static .star span.off {
+  background-image: url(../img/star.png);
+}
+
+/* Javascript Star Version */
+.fivestar-basic div.fivestar-widget .cancel,
+.fivestar-basic div.fivestar-widget .cancel a {
+  background-image: url(cancel.png);
+}
+.fivestar-basic div.fivestar-widget .star,
+.fivestar-basic div.fivestar-widget .star a {
+  background-image: url(../img/star.png);
+}
+
+.fivestar-basic div.fivestar-widget div.hover a,
+.fivestar-basic div.rating div a:hover {
+  background-image: url(../img/star.png);
+}
+
+// ---- inté notation
+.field--name-field-vote {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+  padding: 7rem 0 4rem;
+  border-top: solid 0.1rem $border-color;
+  border-bottom: solid 0.1rem $border-color;
+}
+
+@include media-breakpoint-down(md) {
+  .form-type-fivestar {
+     .fivestar-widget {
+      .star {
+        margin-right: 1.5rem!important;
+      }
+    }
+  }
+}
+// Title fivestars
+.field--type-fivestar {
+  .field__label {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  div.rating div a:hover {
+    background-position: 0 -48px;
+  }
+}
+
+// Etoiles
+.form-type-fivestar {
+  text-align: center;
+
+  .fivestar-widget {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    .star {
+      margin-right: 6.7rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .star,
+    .star a {
+      height: 2.4rem;
+      width: 2.4rem;
+      background-size: cover;
+    }
+    div {
+      &.hover a {
+        background-position: 0 -48px;
+      }
+
+      &.on a {
+        background-position: 0 -24px;
+      }
+    }
+  }
+
+  a:focus {
+    outline-color: $body-color;
+    outline-offset: -0.1rem;
+  }
+}
+// Legend
+.fivestar-summary {
+  margin-top: 1.3rem;
+
+  span {
+    color: $body-color;
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,129 @@
+//  *
+//  * @example
+//  *  @include reset-list();
+//  *  <ul class="reset-list"> ... </ul>
+//  *
+@mixin reset-list() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li,
+    ul li {
+        padding-left: 0;
+
+        &:before {
+            content: "";
+            display: none;
+            margin: 0;
+        }
+    }
+}
+
+//  * Reset list only Level 1
+//  *
+//  * @example
+//  *  @include reset-list--l1();
+//  *  <ul class="reset-list--l1"> ... </ul>
+//  *
+@mixin reset-list--l1() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        padding-left: 0;
+
+        &:before {
+            content: "";
+            display: none;
+            margin: 0;
+        }
+    }
+}
+
+//  *
+//  * @example
+//  *  @include list-ul(red);
+//  *  @include list-ol(green);
+//  *
+@mixin list-ul($color: inherit, $margin: 1rem, $icon: false, $styles: false) {
+    list-style: none; // level 1
+
+    > li {
+        position: relative;
+        margin-bottom: $margin;
+        padding-left: 2rem;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: .8rem;
+            left: 0;
+            width: .8rem;
+            height: .8rem;
+            background: $color;
+            margin-right: .8rem;
+            border-radius: 50%;
+        }
+
+        @if $styles {
+            @include icon(before, $icon) {
+                top: 1rem;
+                font-size: 1rem;
+                color: $color;
+            }
+        }
+    }
+}
+
+@mixin list-ol($color: inherit, $margin: 1rem) {
+    list-style: none;
+    counter-reset: list; // level 1
+
+    > li {
+        counter-increment: list;
+        counter-reset: subsection;
+        position: relative;
+        margin-bottom: $margin;
+        padding-left: 2rem;
+
+        &:before {
+            content: counter(list, decimal) ".";
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-weight: 700;
+            color: $color;
+        }
+
+        // level 2
+        ol {
+            counter-reset: sublist;
+
+            > li {
+                counter-increment: sublist;
+                padding-left: 3.5rem;
+
+                &:before {
+                    content: counter(list, decimal) "." counter(sublist, decimal);
+                }
+            }
+        }
+
+        // level 3
+        ol ol {
+            counter-reset: subsublist;
+
+            > li {
+                counter-increment: subsublist;
+                padding-left: 5rem;
+
+                &:before {
+                    content: counter(list, decimal) "." counter(sublist, decimal) "." counter(subsublist, decimal);
+                }
+            }
+        }
+    }
+}

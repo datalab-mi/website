@@ -1,0 +1,129 @@
+@each $color, $value in $project-colors {
+
+    .text-#{$color} {
+        color: $value;
+    }
+
+    .bg-#{$color} {
+        background-color: $value!important;
+    }
+}
+@each $color, $value in $project-colors {
+    .bg-opacity--#{$color} {
+        background-color: rgba($value, .1)!important;
+    }
+}
+@each $color, $value in $project-colors {
+    .bg-opacity-2--#{$color} {
+        background-color: rgba($value, .2)!important;
+    }
+}
+@each $color, $value in $project-colors {
+    .bg-ressources--#{$color} {
+        background-color: rgba($value, .1)!important;
+        border: .1rem solid $value!important;
+        a {
+            &:before {
+                content: "";
+                display: block;
+                width: 95%;
+                height: .1rem;
+                background: $value;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                text-align: center;
+
+            }
+            &:last-child {
+                &::before {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+// different svg img color
+// to clean svg image : https://svgomg.firebaseapp.com/
+// to convert svg image : https://yoksel.github.io/url-encoder/
+@each $color, $value in $project-colors {
+    .potato--#{$color} {
+        & {
+            position: relative;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: -3.5rem;
+            background-image: url("data:image/svg+xml,%3Csvg width='455' height='465' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.989 159.131c-12.433 71.615-9.751 168.97 27.944 232.65 11.553 19.514 27.663 35.842 47.507 46.83 44.954 24.89 89.855 39.39 136.214 8.158 30.03-20.234 42.403-52.473 67.251-76.847 47.133-46.234 128.582-40.413 158.83-106.852 22.18-48.715 3.83-106.355-22.2-149.835-26.26-43.867-66.814-80.042-114.553-98.55-11.575-4.489-23.538-7.968-35.726-10.324C180.73-13.326 53.465 38.277 15.821 128.868c-4.014 9.658-7.007 19.758-8.832 30.263z' fill='#{$value}' fill-rule='evenodd' fill-opacity='.1'/%3E%3C/svg%3E");            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            width: 14.7rem;
+            height: 13.9rem;
+            z-index: -1;
+        }
+    }
+    .potato-2--#{$color} {
+        & {
+            position: relative;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: -3.5rem;
+            background-image: url("data:image/svg+xml,%3Csvg width='641' height='461' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M637.034 194.879c10.214-53.399.332-105.671-41.458-146.483C558.21 11.908 503.236-1.449 451.2.443c-24.355.884-49.24 4.996-70.195 17.425-18.796 11.15-33.216 28.227-49.585 42.725-32.414 28.714-73.4 47.574-116.28 53.508-34.143 4.725-68.952 1.424-103.255 4.822-34.305 3.395-70.126 15.037-91.104 42.429C5.708 181.034.117 206.765.809 231.606c1.669 59.942 37.966 115.236 85.94 151.131 47.975 35.896 106.542 54.67 165.124 66.732 56.534 11.64 116.394 17.385 170.975-1.188 88.038-29.961 193.264-144.038 214.186-253.402' fill='#{$value}' fill-rule='evenodd' fill-opacity='.1'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            width: 14.3rem;
+            height: 10.3rem;
+            transform: rotateX(190deg);
+        }
+    }
+    .big-potato--#{$color} {
+        & {
+            position: relative;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: -1rem;
+            background-image: url("data:image/svg+xml,%3Csvg width='641' height='461' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M637.034 194.879c10.214-53.399.332-105.671-41.458-146.483C558.21 11.908 503.236-1.449 451.2.443c-24.355.884-49.24 4.996-70.195 17.425-18.796 11.15-33.216 28.227-49.585 42.725-32.414 28.714-73.4 47.574-116.28 53.508-34.143 4.725-68.952 1.424-103.255 4.822-34.305 3.395-70.126 15.037-91.104 42.429C5.708 181.034.117 206.765.809 231.606c1.669 59.942 37.966 115.236 85.94 151.131 47.975 35.896 106.542 54.67 165.124 66.732 56.534 11.64 116.394 17.385 170.975-1.188 88.038-29.961 193.264-144.038 214.186-253.402' fill='#{$value}' fill-rule='evenodd' fill-opacity='.1'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .potato-left-right--#{$color} {
+        background-image: url("data:image/svg+xml,%3Csvg width='336' height='342' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M92.684 323.319c51.088 17.44 122.813 26.779 173.907 6.521 15.658-6.209 29.508-16.132 39.874-29.414 23.484-30.088 39.339-61.345 21.817-98.983-11.352-24.381-33.563-37.203-48.555-58.264-28.436-39.948-14.7-99.025-59.92-128.933C186.65-7.684 142.235-.918 107.315 13.13c-35.23 14.17-66.48 39.72-85.605 72.593a154.561 154.561 0 0 0-11.726 25.011c-23.613 65.092-.55 164.452 61.527 202.59 6.618 4.068 13.678 7.437 21.173 9.996z' fill='#{$value}' fill-rule='evenodd' fill-opacity='.1'/%3E%3C/svg%3E")
+        ,url("data:image/svg+xml,%3Csvg width='356' height='335' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M187.094.809C133.53 7.529 64.97 30.577 27.928 71.183 16.577 83.628 8.478 98.618 4.983 115.1c-7.916 37.337-8.464 72.381 23.783 98.529 20.892 16.937 46.475 18.725 69.182 31.082 43.07 23.44 56.623 82.56 110.377 89.617 39.415 5.176 76.368-20.376 101.597-48.309 25.453-28.18 42.34-64.843 45.118-102.773.675-9.197.549-18.45-.425-27.62C347.304 86.77 283.02 7.576 210.505.51c-7.73-.754-15.554-.687-23.411.299z' fill='#{$value}' fill-rule='evenodd' fill-opacity='.1'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 33.5rem;
+        background-repeat: no-repeat;
+        // background-position: top 12rem left -4rem,top -5.5rem right -8rem;
+        background-position: top 9rem left -14rem,top -7.7em right -18rem;  //bg with image
+        // background-position: 0rem 11rem, top -8rem right -9rem;
+        border-radius: 2rem;
+        height: 100%;
+    }
+}
+.text-white {
+    a:not(.btn) {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            color: inherit;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

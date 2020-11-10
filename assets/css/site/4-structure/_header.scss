@@ -1,0 +1,37 @@
+header {
+    .navbar {
+        margin: 0 auto;
+        max-width: 100%;
+        position: relative;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+//--- RDW tablet/Desktop
+@include media-breakpoint-up(md) {
+    header {
+        .navbar {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            flex-direction: row;
+
+            .navbar__logo {
+                margin-right: 2rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

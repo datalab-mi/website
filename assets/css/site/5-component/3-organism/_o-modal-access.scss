@@ -1,0 +1,60 @@
+.modal--access {
+    padding-right: 0!important;
+    z-index: 9999;
+    // background-color: $white;
+}
+.modal--access .modal-content {
+    padding: 6rem 3rem 3rem;
+
+    .btn-close {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+}
+.modal--access .modal-header {
+    flex-direction: column;
+}
+
+.modal--access .modal-title {
+    margin-bottom: 2rem!important;
+    font-size: 2.4rem;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+}
+
+.modal--access .modal-dialog {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+
+    .form-group {
+       &:last-child {
+            margin-bottom: 0;
+       }
+        &.form-group-custom-control {
+            fieldset {
+                legend {
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
+                }
+
+                .custom-control.custom-radio {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+//--- RDW tablet/Desktop
+@include media-breakpoint-down(sm) {
+    .modal--access {
+        background-color: $white;
+    }
+    .modal--access .modal-dialog {
+        min-height: 0;
+    }
+}

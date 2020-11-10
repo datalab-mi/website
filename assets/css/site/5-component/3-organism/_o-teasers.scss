@@ -1,0 +1,10 @@
+@include media-breakpoint-up(lg) {
+    .o-teasers--3by3 {
+        @include aw-make-row($grid-gutter-width);
+
+        .o-teasers__item {
+            @include aw-make-col-ready($grid-gutter-width);
+            @include aw-make-col-value(33.333%);
+        }
+    }
+}

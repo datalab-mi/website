@@ -1,0 +1,7 @@
+#_dataa/navbar.yml
+- name: Home
+  link: /
+- name: Contact
+  link: /contact
+- name: FAQ
+  link: /faq

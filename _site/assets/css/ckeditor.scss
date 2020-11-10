@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+$fonticon-name: 'g_nius';
+
+@import './0-mixin/__index';
+@import './3-framework/bootstrap-4.4.1/functions';
+//
+
+@import './0-variable/var-custom';
+@import './0-variable/var-bootstrap';
+@import './3-framework/__index-vars';
+
+//
+@import './1-base/__index';
+
+@import "./3-framework/bootstrap-4.4.1/root";
+@import "./3-framework/bootstrap-4.4.1/reboot";
+@import "./3-framework/bootstrap-4.4.1/type";
+@import "./3-framework/bootstrap-4.4.1/images";
+@import "./3-framework/bootstrap-4.4.1/tables";
+
+@import './site/4-structure/typography';
+@import './site/4-structure/wysiwyg';
+
+
+// specific for ckeditor
+.cke_editable {
+    table {
+        @extend .table;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}

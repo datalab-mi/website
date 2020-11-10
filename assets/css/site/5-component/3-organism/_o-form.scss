@@ -1,0 +1,220 @@
+label {
+    color: $gray-600;
+}
+
+legend {
+    margin-bottom: 0;
+    font-weight: $fw-semiBold;
+    font-size: inherit;
+}
+
+.fieldset-legend {
+    margin-bottom: 3rem;
+}
+
+form .description {
+    margin-top: $form-feedback-margin-top;
+    margin-bottom: $paragraph-margin-bottom;
+    font-size: $form-feedback-font-size;
+    color: $gray-600;
+}
+
+// reset drupal
+.form-required:after {
+    content: none;
+}
+
+.form-item,
+.form-actions,
+.form--inline .form-item {
+    margin: 0;
+}
+
+fieldset.webform-composite-hidden-title {
+    margin-top: $form-group-margin-bottom;
+    margin-bottom: $form-group-margin-bottom;
+}
+// end reset drupal
+
+.form-group,
+.form-item {
+    margin-bottom: $form-group-margin-bottom;
+}
+
+.form-group-submit {
+    margin-bottom: 0;
+}
+
+.form-checkboxes .form-item,
+.form-radios .form-item {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    height: $input-height;
+    padding: $input-padding-y $input-padding-x;
+    font-weight: $input-font-weight;
+    line-height: $input-line-height;
+    color: $input-color;
+    background-color: $input-bg;
+    background-clip: padding-box;
+    border: $input-border-width solid $input-border-color;
+    border-radius: $border-radius-sm;
+    transition: $input-transition;
+
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+        background-color: transparent;
+        border: 0;
+    }
+
+    // Remove select outline from select box in FF
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 $input-color;
+    }
+
+    // Placeholder
+    &::placeholder {
+        color: $input-placeholder-color;
+        // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        opacity: 1;
+    }
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &:disabled,
+    &[readonly] {
+        background-color: $input-disabled-bg;
+        // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+        opacity: 1;
+    }
+}
+
+select {
+    &:focus::-ms-value {
+        // Suppress the nested default white text on blue background highlight given to
+        // the selected option text when the (still closed) <select> receives focus
+        // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+        // match the appearance of the native widget.
+        // See https://github.com/twbs/bootstrap/issues/19398.
+        color: $input-color;
+        background-color: $input-bg;
+    }
+
+    &[size],
+    &[multiple] {
+        height: auto;
+    }
+}
+
+textarea {
+    height: auto;
+}
+
+// Les formulaires
+form {
+    // Capatcha
+    .captcha > * {
+        &:first-child {
+            margin-top: 0;
+        }
+        margin: 2rem auto;
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        font-weight: $fw-semiBold;
+        color: $body-color;
+        margin-bottom: 0;
+    }
+
+    label + input[type="text"],
+    label + input[type="email"],
+    label + area,
+    label + .form-textarea-wrapper {
+        margin-top: 1rem;
+    }
+
+    input[type="radio"] + label {
+        display: inline-block;
+        margin-left: 0.95rem;
+        vertical-align: middle;
+        font-weight: normal;
+    }
+
+    .webform-actions {
+        text-align: center;
+    }
+
+    // INscription
+    &.webform-submission-inscription-form {
+        .radios--wrapper {
+            margin: $form-group-margin-bottom auto;
+            text-align: center;
+            border-bottom: 0.1rem solid $gray-300;
+            border-top: 0.1rem solid $gray-300;
+            padding-top: $form-group-margin-bottom;
+            padding-bottom: $form-group-margin-bottom;
+
+            legend {
+                float: left;
+                margin-right: 2rem;
+                text-align: left;
+                width: calc(35% - 4rem);
+                font-weight: $fw-semiBold;
+            }
+
+            .fieldset-wrapper {
+                float: right;
+                width: 65%;
+                margin: auto;
+                text-align: left;
+
+                label {
+                    color: $gray-600;
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+@include media-breakpoint-down(sm) {
+    // Les formulaires
+    form {
+        // Inscription
+        &.webform-submission-inscription-form {
+            .radios--wrapper {
+                legend {
+                    float: none;
+                    width: 100%;
+                    margin-bottom: 0;
+                }
+
+                .fieldset-wrapper {
+                    float: none;
+                    width: 100%;
+
+                    .form-item {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: baseline;
+                    }
+                }
+            }
+        }
+    }
+}

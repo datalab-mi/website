@@ -1,0 +1,172 @@
+.o-block-head {
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+
+    &__item {
+        flex: 1 0 50%;
+        padding: 0;
+
+        &:last-child {
+            background-color: $white;
+            border-top-right-radius: 2rem;
+            border-top-left-radius: 2rem;
+        }
+
+        &.bigBox2_item, &.bigBox1_item {
+            padding: 0;
+        }
+    }
+}
+.blockHead-minibox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 3rem;
+    h3 {
+        font-size: 1.6rem;
+    }
+    .block-cols {
+        background-color: red;
+        padding: 2rem;
+        border-radius: .4rem;
+        margin-bottom: 4rem;
+        min-height: 12.1rem;
+        flex: 0 1 calc(50% - 2rem);
+
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+    }
+
+}
+.o-block-head_tag {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+
+    .from-to-date {
+        margin-top: 2rem;
+    }
+    p {
+        margin-right: .6rem;
+    }
+    .separator {
+        margin: 0 .6rem;
+        font-size: 1.2rem;
+    }
+    .from-date {
+        margin-right: 0.6rem;
+    }
+}
+
+// bigBox 1 & bigBox 2
+// switching betwing 2 boxes in the left of the bloc
+
+// bigBox 1 is for Page Evenements
+.bigBox1 {
+    .bigBox1_bg {
+        // height: 33.6rem;
+        @include aspect-ratio (553, 336);
+        img {
+             border-radius: 2rem 2rem 0 0;
+            @include aspect-ratio--item;
+        }
+    }
+    .box_bottom {
+        padding: 2rem 2rem 2rem;
+    }
+
+    .bigBox1_legend {
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    .bigBox1_content {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// bigBox2 if for page Actor and Financement
+.bigBox2 {
+    // padding: 0 2.5rem;
+    .bigBox2_bg {
+        text-align: center;
+
+        @include aspect-ratio (553, 336);
+        img {
+             border-radius: 2rem 2rem 0 0;
+            @include aspect-ratio--item;
+        }
+    }
+    .bigBox2_content {
+        margin-top: 7rem;
+        padding: 0 1rem 2rem 1rem;
+    }
+    h2 {
+        margin-bottom: 3rem;
+    }
+}
+// bigBox2 is for Page Acteur
+//--- RDW tablet/Desktop
+@include media-breakpoint-up(sm) {
+    .o-block-head {
+        padding: 10rem 4rem 0 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-start;
+
+        &__item {
+            padding: 0 4rem;
+
+            &.bigBox1_item {
+                padding: 0;
+            }
+        }
+    }
+
+    // minibox
+    .blockHead-minibox {
+        flex-direction: row;
+    }
+
+    // Commun boxes
+    .bigBox1, .bigBox2 {
+        margin-bottom: 0;
+    }
+
+    // Tag & date
+    .o-block-head_tag {
+        margin-bottom: 11rem;
+        flex-direction: row;
+
+        .from-to-date {
+            margin-top: 0;
+            margin-left: 3rem;
+        }
+    }
+
+    // bigBox 1
+    .bigBox1 {
+        margin-bottom: 0;
+        .box_bottom {
+            padding: 2rem 4rem 0;
+        }
+    }
+
+    // bigBox 2
+    .bigBox2 {
+       padding: 0;
+
+       .bigBox2_content {
+           padding: 0 4rem 0;
+       }
+    }
+}

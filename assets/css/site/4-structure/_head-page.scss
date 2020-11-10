@@ -1,0 +1,21 @@
+.head-page {
+    padding: 4rem;
+    border: 1px solid $gray-500;
+    border-radius: 2rem;
+    background-color: rbga($gray-200, .1);
+    h2+p {
+        margin-top: 3rem;
+    }
+}
+
+.page-solution_left {
+    img {
+        border: 1px solid $gray-500;
+        border-radius: .4rem;
+        padding: 2rem 4.8rem;
+    }
+}
+
+.page-solution_right {
+    margin-top: 3rem;
+}

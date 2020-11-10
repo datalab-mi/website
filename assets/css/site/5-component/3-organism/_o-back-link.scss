@@ -1,0 +1,19 @@
+.o-back-link {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid $gray-300;
+    border-bottom: 1px solid $gray-300;
+    span {
+        margin-right: 2rem;
+        @include icon(before, icon-arrow-left);
+    }
+    a {
+        display: flex;
+        align-items: baseline;
+        text-decoration: none;
+        color: $body-color;
+        font-size: 1.4rem;
+        font-weight: $fw-semiBold;
+
+    }
+}

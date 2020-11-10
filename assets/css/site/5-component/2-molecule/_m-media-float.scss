@@ -1,0 +1,37 @@
+.m-media-float {
+    margin-bottom: 2rem;
+
+    // width of <figcaption> match the width of <img>
+    // https://stackoverflow.com/a/11652170
+    figure {
+        display: table;
+
+        figcaption {
+            display: table-caption;
+            caption-side: bottom;
+        }
+
+        // fix bug IE: img overflow container inside table
+        img {
+            width: 100%;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        float: none !important;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .m-media-float {
+        max-width: 50%;
+
+        &.float-left {
+            padding-right: 3rem;
+        }
+
+        &.float-right {
+            padding-left: 3rem;
+        }
+    }
+}

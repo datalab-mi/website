@@ -1,0 +1,15 @@
+<!-- {% if page.head %} -->
+  <div>
+    <h1> {{ page.title }} </h1>
+    <p> {{ page.subtitle }} </p>
+
+    <div class="ruban">
+      <p class="ruban--title"> {{ include.rubanTitle }} </p>
+      <p class="ruban--content"> {{ include.rubanContent }} </p>
+      <button type="button" class="navbar__logo" href="https://solidarites-sante.gouv.fr/">
+        <img src="{{ '../assets/images/arrow-bottom.png' | relative_url }}"
+                                  alt="ministere logo" />
+      </button>
+    </div>
+  </div>
+<!-- {% endif %} -->

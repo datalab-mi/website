@@ -1,0 +1,103 @@
+// var-custom.scss -- Variables for project
+
+// Colors
+$white:         #FFFFFF;
+$primary:       #0d0091;
+$primary-clear: #E52D75;
+$brand-2:       #FBA026;
+$brand-3:       #EB6B56;
+$brand-4:       #8569B1;
+$brand-5:       #2A80B9;
+$brand-6:       #16A086;
+$brand-7:       #FBA023;
+$gray-800:      #363636;
+$gray-200:      #e5e5e5;
+$gray-300:      #D5D5D5;
+$blue-dark:     #2A589B;
+
+$body-color:    #1F2244;
+
+$project-colors: (
+    "default": $body-color,
+    "primary": $primary,
+    "primary-clear": $primary,
+    "brand-2": $brand-2,
+    "brand-3": $brand-3,
+    "brand-4": $brand-4,
+    "brand-5": $brand-5,
+    "brand-6": $brand-6,
+    "brand-7": $brand-7,
+    "gray-800": $gray-800,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "white": $white
+);
+
+//background color with opacity
+$elmt-orange-bg:    rgba(251,160,35,0.1);
+$elmt-purple-bg:    rgba(133,105,177,0.1);
+$elmt-green-bg:     rgba(22,160,134,0.1);
+$elmt-pink-bg:      rgba(197,38,100,0.1);
+
+// Font weight
+$fw-light : 300;
+$fw-regular : 400;
+$fw-medium : 500;
+$fw-semiBold : 600;
+$fw-bold : 700;
+$fw-extraBold : 800;
+$fw-black : 900;
+
+$typo-familles-weight: (
+    "light": $fw-light,
+    "regular": $fw-regular,
+    "medium": $fw-medium,
+    "semiBold": $fw-semiBold,
+    "bold": $fw-bold,
+    "extraBold": $fw-extraBold,
+    "black": $fw-black,
+);
+
+// Fonticon
+$fonticon_folder:   'icomoon';
+$fonticon_token:    '1ejse4';
+$fonticon-path:     '../font/#{$fonticon_folder}/#{$fonticon-name}';
+
+$icons: (
+    icon-imprimante: "\e920",
+    icon-plateforme-numerique: "\e91c",
+    icon-outils: "\e91d",
+    icon-donnees: "\e91e",
+    icon-documents: "\e91f",
+    icon-player: "\e900",
+    icon-profil: "\e914",
+    icon-pin: "\e915",
+    // icon-pink-close: "\e916",
+    icon-plus: "\e918",
+    icon-moins: "\e919",
+    icon-video: "\e901",
+    icon-edit: "\e902",
+    icon-podcast: "\e903",
+    icon-access: "\e904",
+    icon-external-link: "\e905",
+    icon-search: "\e906",
+    icon-star: "\e907",
+    icon-check: "\e908",
+    icon-flag: "\e909",
+    icon-time: "\e90a",
+    icon-arrow-right: "\e90b",
+    icon-arrow-left: "\e90c",
+    icon-share: "\e90d",
+    icon-filter: "\e90e",
+    icon-angle-right: "\e90f",
+    icon-angle-left: "\e917",
+    icon-angle-up: "\e91a",
+    icon-angle-down: "\e910",
+    icon-twitter: "\e911",
+    icon-linkedin: "\e912",
+    icon-facebook: "\e913",
+    icon-instagram: "\e91b"
+);
+
+$block-space: 8rem;
+$block-space-desktop: 8rem;

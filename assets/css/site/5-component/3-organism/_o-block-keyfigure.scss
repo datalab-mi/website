@@ -1,0 +1,42 @@
+
+.o-block-keyfigure {
+    // margin-right: 2rem;
+    // margin-left: 2rem;
+}
+.o-block-keyfigure_item {
+    display: flex;
+    margin-top: 3.5rem; // space for potato bg
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .keyfigure_num {
+        margin-right: 1.5rem;
+        font-size: 3.8rem;
+        font-weight: bold;
+        white-space: nowrap;
+        line-height: normal;
+    }
+
+    .keyfigure_unite {
+        font-weight: bold;
+        width: 12rem;
+    }
+}
+
+
+// RWD tablet/desktop
+@include media-breakpoint-up(sm) {
+
+    .o-block-keyfigure {
+
+    }
+    .o-block-keyfigure_item {
+        margin-bottom: 0;
+
+        .keyfigure_num {
+            font-size: 4.8rem;
+        }
+    }
+}

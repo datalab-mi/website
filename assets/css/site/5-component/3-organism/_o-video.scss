@@ -1,0 +1,139 @@
+.o-video {
+    position: relative;
+    background-color: $body-color;
+    margin: 5rem 0;
+    text-align: center;
+    line-height: 2;
+
+    iframe {
+        z-index: 1;
+    }
+}
+
+// .o-video__content {
+//     position: relative;
+//     max-height: 500px;
+//     height: 500px;
+// }
+
+.o-video iframe,
+.o-video__img {
+    @include aspect-ratio--item();
+    height: 100%;
+}
+
+.o-video__img {
+    z-index: 0;
+    @include gradient-overlay;
+
+    img {
+        @include img-cover;
+    }
+}
+
+.o-video__text {
+    display: block;
+    padding: 2rem;
+    z-index: 1;
+
+    h2 {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+    @include aspect-ratio(16, 9);
+
+    // min-height of .o-video is 16/9 ratio but it can be longer
+    // https://keithjgrant.com/posts/2017/03/aspect-ratios/
+    &::before {
+        float: left;
+    }
+    &::after {
+        content: " ";
+        display: table;
+        clear: left;
+    }
+}
+
+.o-video__btn {
+    position: relative;
+    width: 100%;
+    font-size: 9rem;
+    color: $white;
+
+    @include hover {
+        color: $primary;
+    }
+
+    .icon-player {
+        &::before {
+            border: 2px solid $white;
+            border-radius: 50%;
+        }
+    }
+
+}
+
+.o-video__disclaimer {
+    position: relative;
+    margin-bottom: 0;
+    padding: 1rem 2rem;
+    text-align: left;
+    background-color: $body-color;
+}
+
+// Transcription
+.o-video__transcription {
+    color: $body-color;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    .o-video__transcription-btn {
+        font-weight: $fw-bold;
+        margin-bottom: 2rem;
+
+        @include icon(after, icon-angle-down) {
+            margin-left: 1rem;
+            font-size: 1rem;
+        }
+        &[aria-expanded="true"] {
+            @include icon(after, icon-angle-up) {
+                font-size: 1rem;
+            }
+        }
+    }
+    .o-video__transcription-text {
+        margin-top: 4rem;
+    }
+}
+
+
+
+
+// RWD Desktop
+@include media-breakpoint-up(lg) {
+    .o-video__text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 0 10rem;
+    }
+
+    .o-video__btn {
+        height: 12rem;
+        flex: 1 0 30%;
+        font-size: 12rem;
+        .icon-player {
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 12rem;
+                height: 12rem;
+                line-height: 11rem;
+
+            }
+        }
+    }
+}

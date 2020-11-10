@@ -1,0 +1,43 @@
+.o-ressources {
+    display: block;
+    width: 100%;
+
+    .ressources_title {
+        margin-bottom: 3rem;
+    }
+    .o-ressources_wrapper {
+        border-radius: .4rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .ressources_lienLibelle {
+        @include list-ul($primary);
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: $fw-bold;
+        color: $body-color;
+        padding: 2.5rem 4rem 2rem 2rem;
+        position: relative;
+
+        @include icon(after, icon-arrow-right){
+            position: absolute;
+            right: calc(2rem);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:hover {
+            .ressources_lienName {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .ressources_lienDoc {
+        display: block;
+        font-weight: $fw-regular;
+    }
+
+    .icon-external-link {
+        display: none;
+    }
+}

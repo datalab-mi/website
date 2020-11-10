@@ -1,0 +1,101 @@
+{% extends "../../_layout.twig" %}
+
+{% set title = 'Plan du site' %}
+{% set hasSearch = true %}
+
+{% block main %}
+
+    {%- include "../../site/component/3-organism/o-presentation-generale.twig" with {
+        presentationGenerale_title: title
+    }%}
+
+    <div class="container-smaller block-space">
+        {% include "../../site/component/3-organism/o-sitemap.twig" with {
+            sitemap: [
+                {
+                    text: "Lvl1. Nav item 1",
+                    link: "#"
+                },
+                {
+                    text: "Lvl1. Nav item 2 With children [no link]",
+                    hasChild: [
+                        {
+                            text: "Lvl2. Children 1",
+                            link: "#"
+                        },
+                        {
+                            text: "Lvl2. Children 2 with long text lorem ipsum with long text lorem ipsum with long text lorem ipsum",
+                            link: "#"
+                        },
+                        {
+                            text: "Lvl2. Children 3 target blank",
+                            link: "#",
+                            target: "_blank"
+                        },
+                        {
+                            text: "Lvl2. Children 4 with children [no link]",
+                            hasChild: [
+                                {
+                                    text: "Lvl3. Children 1",
+                                    link: "#"
+                                },
+                                {
+                                    text: "Lvl3. Children 2 with long text lorem ipsum with long text lorem ipsum with long text lorem ipsum",
+                                    link: "#"
+                                },
+                                {
+                                    text: "Lvl3. Children 3 target blank",
+                                    link: "#",
+                                    target: "_blank"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    text: "Lvl1. Nav item 3",
+                    link: "#"
+                },
+                {
+                    text: "Lvl1. Nav item 4 With children",
+                    link: "#",
+                    hasChild: [
+                        {
+                            text: "Lvl2. Children 1",
+                            link: "#"
+                        },
+                        {
+                            text: "Lvl2. Children 2 with long text lorem ipsum with long text lorem ipsum with long text lorem ipsum",
+                            link: "#"
+                        },
+                        {
+                            text: "Lvl2. Children 3 target blank",
+                            link: "#",
+                            target: "_blank"
+                        },
+                        {
+                            text: "Lvl2. Children 4 with children",
+                            link: "#",
+                            hasChild: [
+                                {
+                                    text: "Lvl3. Children 1",
+                                    link: "#"
+                                },
+                                {
+                                    text: "Lvl3. Children 2 with long text lorem ipsum with long text lorem ipsum with long text lorem ipsum",
+                                    link: "#"
+                                },
+                                {
+                                    text: "Lvl3. Children 3 target blank",
+                                    link: "#",
+                                    target: "_blank"
+                                }
+                            ]
+                        }
+                    ]
+                },
+            ]
+        } %}
+    </div>
+
+{% endblock %}
