@@ -1,12 +1,8 @@
-button {
-    @include reset-btn;
-}
-
 .btn {
     display: inline-block;
     font-family: $btn-font-family;
     font-weight: $btn-font-weight;
-    color: $body-color;
+    color: $white;
     text-align: center;
     white-space: $btn-white-space;
     vertical-align: middle;
@@ -14,12 +10,15 @@ button {
     user-select: none;
     background-color: transparent;
     border: $btn-border-width solid transparent;
+    text-decoration: none;
     @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
     @include transition($btn-transition);
 
     @include hover() {
-      color: $body-color;
+      color: $blue;
       text-decoration: none;
+      background-color: white;
+      border: 1px solid $blue;
     }
 
     &:focus,

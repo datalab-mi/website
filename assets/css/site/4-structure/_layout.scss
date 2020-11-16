@@ -5,9 +5,10 @@
 }
 main {
     .block-space {
-        &:first-child {
-            margin-top: 0;
-        }
+        margin-top: 130px;
+        // &:first-child {
+        //     margin-top: 0;
+        // }
     }
 }
 body {
@@ -24,76 +25,14 @@ a {
 }
 
 p {
-    // &:first-child {
-    //     margin-top: 6rem;
-    // }
      &:last-child {
         margin-bottom: 0;
     }
 }
 
-figure,
-.figure {
-    display: block;
-    margin: 0; // reset bootstrap
-}
-
-iframe {
-    display: block;
-    width: 100%;
-
-}
-
-iframe ~ .o-teaser__content {
-    margin-top: 2rem;
-}
-
-// Space between components
-
-.block-space {
-    margin-top: $block-space;
-    margin-bottom: $block-space;
-}
-
-// RWD tablet/desktop
-@include media-breakpoint-up(sm) {
-    .block-space {
-        margin-top: $block-space-desktop;
-        margin-bottom: $block-space-desktop;
-    }
-}
-
-// .container-smaller {
-//     max-width: 80rem;
-//     margin-right: auto;
-//     margin-left: auto;
-// }
-
-.container-medium {
-    max-width: 101rem;
+.container-larger {
+    max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
 }
 
-// Make children of columns have the same height
-//      <div class="row col--eq-height">
-.col--eq-height {
-    display: flex;
-    flex-wrap: wrap;
-
-    > * {
-        display: flex!important;
-
-        > * {
-            width: 100%;
-        }
-    }
-}
-
-.block-title + .block-space  {
-    margin-top: 0;
-}
-
-.aw-col-38 {
-    @include aw-make-col-value(38rem);
-}

@@ -1,0 +1,122 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/**
+ * Basic styling
+ */
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-weight: 300;
+    color: $blue;
+    // background-color: $background-color;
+}
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+// /**
+//  * Figures
+//  */
+// figure > img {
+//     display: block;
+// }
+
+// figcaption {
+//     font-size: $small-font-size;
+// }
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: 0;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+
+
+/**
+ * Links
+ */
+a.link {
+    color: $blue;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($blue, 15%);
+    }
+
+    &:hover {
+        color: $blue;
+        text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $white;
+        }
+    }
+}

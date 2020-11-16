@@ -19,8 +19,8 @@
         //      url($wf-src + ".woff") format('woff'),
         //      url($wf-src + ".ttf") format('truetype');
         src: url($wf-src + '.woff2') format('woff2'),
-             url($wf-src + '.woff') format('woff'),
-             url($wf-src + '.ttf') format('truetype');
+             url($wf-src + '.woff') format('woff');
+            //  url($wf-src + '.ttf') format('truetype');
         font-weight: #{$font-weight};
         font-style: #{$font-style};
         font-display: #{$font-display};
@@ -61,4 +61,3 @@
         @warn "$map est vide ou n'existe pas";
     }
 }
-  
