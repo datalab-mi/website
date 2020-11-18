@@ -1,8 +1,8 @@
 # Site settings
 # http://jekyllrb.com/docs/configuration/
-title: Mon Jekyll
+title: Datalab Project
 email: meryem.achemlal@alterway.fr
-description:  Dr Jekyll vous aide à construire vos sites statiques !
+description:  Datalab Project
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 # twitter_username: tweetpressfr
@@ -11,5 +11,8 @@ github_username:  mery92
 # Build settings
 markdown: kramdown
 sass:
-  sass_dir: assets/css
-  style:    compressed
+    load_paths:
+        - node_modules
+        - assets/css
+    style: compressed
+exclude: []

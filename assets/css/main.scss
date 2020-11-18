@@ -4,6 +4,7 @@
 
 
 $fonticon-name-marianne: 'Marianne';
+$fonticon-name-icon: 'remixicon';
 // $fonticon-name-spectral: 'spectral';
 
 @import './0-mixin/__index';
@@ -11,7 +12,7 @@ $fonticon-name-marianne: 'Marianne';
 //
 
 // @import './0-variable/var-custom';
-@import './0-variable/var-bootstrap';
+@import './0-variable/var-custom';
 @import './3-framework/__index-vars';
 
 //

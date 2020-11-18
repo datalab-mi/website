@@ -13,6 +13,15 @@ $font-size-sm:                $font-size-base * .875;
 
 // Color system
 
+// Gray
+$gray-100: #F8F8F8 !default;
+$gray-200: #F0F0F0 !default;
+$gray-300: #E7E7E7 !default;
+$gray-400: #CECECE !default;
+$gray-500: #9C9C9C !default;
+$gray-600: #383838 !default;
+$gray-800: #1E1E1E !default;
+
 $white:    #FFF !default;
 $black:    #000 !default;
 $blue:       #000091;
@@ -23,17 +32,7 @@ $error-color:       #b60000;
 $success-color:       #0d6635;
 $info-color:       #3a55d1;
 
-
-// Gray
-$gray-100: #F8F8F8 !default;
-$gray-200: #F0F0F0 !default;
-$gray-300: #E7E7E7 !default;
-$gray-400: #CECECE !default;
-$gray-500: #9C9C9C !default;
-$gray-600: #383838 !default;
-$gray-800: #1E1E1E !default;
-
-
+$body-color : $gray-600;
 $project-colors: (
     "blue": $blue,
     "red": $red,
@@ -135,7 +134,6 @@ $container-max-widths: (
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
-
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
@@ -151,3 +149,49 @@ $grid-row-columns:            6;
 $font-family-sans-serif:      marianne, Arial;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base:            $font-family-sans-serif;
+
+
+// Fonticon
+$fonticon_folder:   'remixicon';
+$fonticon-path:     '../font/#{$fonticon_folder}/#{$fonticon-name-icon}';
+
+
+$icons: (
+  ri-linkedin-box-fill : "\eeb3",
+  ri-linkedin-box-line : "\eeb4",
+  ri-linkedin-fill : "\eeb5",
+  ri-linkedin-line : "\eeb6",
+
+  ri-facebook-box-fill: "\ecb8",
+  ri-facebook-box-line: "\ecb9",
+  ri-facebook-circle-fill: "\ecba",
+  ri-facebook-circle-line: "\ecbb",
+  ri-facebook-fill: "\ecbc",
+  ri-facebook-line: "\ecbd",
+
+  ri-instagram-fill: "\ee65",
+  ri-instagram-line: "\ee66"
+);
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+$spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer),
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5),
+    6: ($spacer * 6),
+    7: ($spacer * 7),
+  ),
+  $spacers
+);

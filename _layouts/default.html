@@ -9,9 +9,20 @@
 
     <main>
         {{ content }}
+
+        <!-- <script type="text/javascript" defer  src="{{'../node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script> -->
+<!--
+        <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
+        <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script> -->
+
+<!--
+        <script src="{{ base.url | prepend: site.url }}/assets/js/jquery.js"></script>
+        <script src="{{ base.url | prepend: site.url }}/assets/js/jquery-ui.min.js"></script>
+
+        <script src="{{ base.url | prepend: site.url }}/assets/js/script.js"></script> -->
     </main>
 
-    <!-- {% include footer.html %} -->
+    {% include footer.html %}
 
   </body>
 

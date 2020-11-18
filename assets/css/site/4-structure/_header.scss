@@ -1,0 +1,58 @@
+
+.navbar {
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .nav-left {
+        margin: 0 auto 3rem auto;
+        text-align: center;
+
+        .navbar__logo {
+            display: inline-block;
+            margin-bottom: 2rem;
+
+            &::after {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+a.navbar__btn {
+    font-weight: $fw-regular;
+}
+
+
+
+//--- RDW tablet/Desktop
+@include media-breakpoint-up(md) {
+    .navbar {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: row;
+
+
+        .nav-left {
+            margin: 0;
+            text-align: left;
+        }
+        .navbar__logo {
+            margin-right: 2rem;
+            margin-bottom: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
