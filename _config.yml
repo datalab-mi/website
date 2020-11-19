@@ -3,7 +3,7 @@
 title: Datalab Project
 email: meryem.achemlal@alterway.fr
 description:  Datalab Project
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/website" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 # twitter_username: tweetpressfr
 github_username:  mery92
