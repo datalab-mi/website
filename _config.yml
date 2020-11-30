@@ -2,17 +2,17 @@
 # http://jekyllrb.com/docs/configuration/
 title: Datalab Project
 email: meryem.achemlal@alterway.fr
-description:  Datalab Project
-baseurl: "/website" # the subpath of your site, e.g. /blog/
+description: Datalab Project
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 # twitter_username: tweetpressfr
-github_username:  mery92
+github_username: mery92
 
 # Build settings
 markdown: kramdown
 sass:
-    load_paths:
-        - node_modules
-        - assets/css
-    style: compressed
+  load_paths:
+    - node_modules
+    - assets/css
+  style: compressed
 exclude: []

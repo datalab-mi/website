@@ -1,29 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %}
+  {% include header.html %}
 
-    <main>
-        {{ content }}
+  <main>
+    {{ content }}
+  </main>
 
-        <!-- <script type="text/javascript" defer  src="{{'../node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script> -->
-<!--
-        <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
-        <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script> -->
+  {% include footer.html %}
 
-<!--
-        <script src="{{ base.url | prepend: site.url }}/assets/js/jquery.js"></script>
-        <script src="{{ base.url | prepend: site.url }}/assets/js/jquery-ui.min.js"></script>
-
-        <script src="{{ base.url | prepend: site.url }}/assets/js/script.js"></script> -->
-    </main>
-
-    {% include footer.html %}
-
-  </body>
+</body>
 
 </html>

@@ -1,20 +1,47 @@
-<header class="container">
-  <nav class="navbar" role="navigation">
+<!-- <header class="container">
+  <nav class="navbar rf-header" role="navigation">
     <div class="nav-left">
       <a class="navbar__logo" href="https://solidarites-sante.gouv.fr/">
-        <img src="{{ '../assets/images/ministere-logo-header.svg' | relative_url }}"
-                                  alt="ministere logo" />
+        <img src="{{ '/assets/images/ministere-logo-header.svg' | relative_url }}" alt="ministere logo" />
       </a>
       <a class="navbar__logo" href="https://solidarites-sante.gouv.fr/">
-        <img src="{{ '../assets/images/datalab-logo-header.svg' | relative_url }}"
-                                  alt="datalab logo" />
+        <img src="{{ '/assets/images/datalab-logo-header.svg' | relative_url }}" alt="datalab logo" />
       </a>
     </div>
+
+
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
     <div class="nav-right">
       <a class="btn btn-blue navbar__btn" href="https://solidarites-sante.gouv.fr/">
         Nous contacter
       </a>
     </div>
   </nav>
-</header>
+</header> -->
 
+
+<header class="rf-header">
+  <div class="container rf-container rf-container__header">
+    <div class="rf-header__body">
+      <div class="rf-header__brand">
+        <a href="/search" class="rf-logo" title="République Française">
+          <span class="rf-logo__title">République<br>Française</span>
+        </a>
+      </div>
+      <img src="{{ '../assets/images/datalab-logo-header.svg' | relative_url }}" alt="datalab logo" />
+
+      <!-- menu burger -->
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+      <div class="nav-right">
+        <a class="btn btn-blue navbar__btn" href="https://solidarites-sante.gouv.fr/">
+          Nous contacter
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</header>

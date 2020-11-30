@@ -9,6 +9,10 @@
 
     .footer-left {
         text-align: center;
+
+        img.logo-ministere {
+            width: 17rem;
+        }
         > a {
             display: block;
             margin-top: 1rem;
@@ -29,6 +33,9 @@
             justify-content: center;
 
             > a {
+                text-decoration: none;
+                color: $gray-600;
+                font-weight: bold;
                 margin-bottom: 2rem;
             }
 
@@ -65,7 +72,7 @@
             margin-top: 0;
 
             &--content {
-                margin-right: 3rem;
+                margin-right: 6rem;
 
                 > a {
                     margin-right: 0;
